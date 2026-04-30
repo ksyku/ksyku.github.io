@@ -4,24 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>김세영 — CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f7f5f2;
-      --ink: #1a1814;
-      --muted: #7a7570;
-      --accent: #c8502a;
-      --line: #e0ddd9;
-      --card: #ffffff;
-      --sidebar-w: 240px;
+      --bg: #ffffff;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --accent-light: #eef2ff;
+      --line: #e2e8f0;
+      --card: #f8fafc;
+      --sidebar-w: 220px;
     }
 
     body {
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
       font-weight: 300;
       line-height: 1.65;
       min-height: 100vh;
@@ -30,15 +31,15 @@
     /* ── PAGE WRAPPER ── */
     .page {
       max-width: 960px;
-      margin: 3rem auto 4rem;
+      margin: 3.5rem auto 5rem;
       padding: 0 1.5rem;
     }
 
     /* ── CV HEADER ── */
     .cv-header {
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 1.6rem;
-      margin-bottom: 2.4rem;
+      border-bottom: 1.5px solid var(--line);
+      padding-bottom: 1.8rem;
+      margin-bottom: 2.8rem;
     }
     .cv-header-top {
       display: flex;
@@ -48,33 +49,35 @@
       flex-wrap: wrap;
     }
     .cv-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      letter-spacing: -.01em;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -.03em;
       line-height: 1.1;
+      color: var(--ink);
     }
     .cv-name span { color: var(--accent); }
     .cv-title {
       font-family: 'DM Mono', monospace;
-      font-size: .8rem;
-      letter-spacing: .12em;
+      font-size: .75rem;
+      letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: .4rem;
+      margin-top: .5rem;
     }
     .cv-contacts {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: .28rem;
+      gap: .3rem;
       flex-shrink: 0;
     }
     .cv-contact-item {
       font-family: 'DM Mono', monospace;
-      font-size: .72rem;
+      font-size: .7rem;
       color: var(--muted);
       text-decoration: none;
-      letter-spacing: .04em;
+      letter-spacing: .03em;
     }
     .cv-contact-item:hover { color: var(--accent); }
     .cv-contact-item .label {
@@ -86,7 +89,7 @@
     .cv-body {
       display: grid;
       grid-template-columns: var(--sidebar-w) 1fr;
-      gap: 0 3rem;
+      gap: 0 3.5rem;
       align-items: start;
     }
 
@@ -94,25 +97,25 @@
     .cv-sidebar { display: flex; flex-direction: column; gap: 2.4rem; }
 
     /* ── MAIN ── */
-    .cv-main { display: flex; flex-direction: column; gap: 2.4rem; }
+    .cv-main { display: flex; flex-direction: column; gap: 2.8rem; }
 
-    /* ── SECTION ── */
+    /* ── SECTION TITLE ── */
     .cv-section-title {
       font-family: 'DM Mono', monospace;
-      font-size: .68rem;
-      letter-spacing: .2em;
+      font-size: .65rem;
+      letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--accent);
       border-bottom: 1px solid var(--line);
-      padding-bottom: .4rem;
+      padding-bottom: .45rem;
       margin-bottom: 1.2rem;
     }
 
     /* ── SUMMARY ── */
     .summary-text {
-      font-size: .92rem;
-      color: #4a4744;
-      line-height: 1.85;
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.9;
     }
 
     /* ── SKILLS (sidebar) ── */
@@ -120,11 +123,11 @@
     .skill-group:last-child { margin-bottom: 0; }
     .skill-group-name {
       font-family: 'DM Mono', monospace;
-      font-size: .67rem;
-      letter-spacing: .12em;
+      font-size: .63rem;
+      letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: .45rem;
+      margin-bottom: .5rem;
     }
     .skill-list {
       display: flex;
@@ -133,31 +136,31 @@
     }
     .skill-tag {
       font-family: 'DM Mono', monospace;
-      font-size: .68rem;
-      padding: .22rem .6rem;
+      font-size: .67rem;
+      padding: .2rem .55rem;
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 2px;
+      border-radius: 4px;
       color: var(--ink);
     }
 
-    /* ── ACTIVITIES / AWARDS (sidebar) ── */
+    /* ── SIDEBAR ITEMS ── */
     .sidebar-item { margin-bottom: .9rem; }
     .sidebar-item:last-child { margin-bottom: 0; }
     .sidebar-item-title {
-      font-size: .88rem;
+      font-size: .85rem;
       font-weight: 400;
       color: var(--ink);
     }
     .sidebar-item-sub {
       font-family: 'DM Mono', monospace;
-      font-size: .67rem;
+      font-size: .65rem;
       color: var(--muted);
       margin-top: .15rem;
     }
 
-    /* ── ENTRY (education / experience) ── */
-    .entry { margin-bottom: 1.5rem; }
+    /* ── ENTRY ── */
+    .entry { margin-bottom: 1.6rem; }
     .entry:last-child { margin-bottom: 0; }
     .entry-header {
       display: flex;
@@ -168,51 +171,54 @@
       margin-bottom: .2rem;
     }
     .entry-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.05rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -.01em;
     }
     .entry-period {
       font-family: 'DM Mono', monospace;
-      font-size: .68rem;
+      font-size: .67rem;
       color: var(--muted);
       white-space: nowrap;
       flex-shrink: 0;
     }
     .entry-subtitle {
       font-family: 'DM Mono', monospace;
-      font-size: .72rem;
+      font-size: .7rem;
       color: var(--accent);
-      letter-spacing: .05em;
-      margin-bottom: .5rem;
+      letter-spacing: .04em;
+      margin-bottom: .55rem;
     }
     .entry-desc {
-      font-size: .88rem;
-      color: #4a4744;
-      line-height: 1.8;
+      font-size: .87rem;
+      color: var(--muted);
+      line-height: 1.85;
     }
     .entry-bullets {
       list-style: none;
-      margin-top: .4rem;
+      margin-top: .45rem;
       display: flex;
       flex-direction: column;
-      gap: .3rem;
+      gap: .35rem;
     }
     .entry-bullets li {
-      font-size: .88rem;
-      color: #4a4744;
+      font-size: .87rem;
+      color: #374151;
       line-height: 1.75;
-      padding-left: 1em;
+      padding-left: 1.1em;
       position: relative;
     }
     .entry-bullets li::before {
-      content: '–';
+      content: '·';
       position: absolute;
       left: 0;
       color: var(--accent);
+      font-weight: 600;
     }
 
-    /* ── PROJECT (main) ── */
-    .project-entry { margin-bottom: 1.4rem; }
+    /* ── PROJECT ── */
+    .project-entry { margin-bottom: 1.5rem; }
     .project-entry:last-child { margin-bottom: 0; }
     .project-header {
       display: flex;
@@ -223,13 +229,15 @@
       margin-bottom: .2rem;
     }
     .project-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .97rem;
+      font-weight: 500;
+      letter-spacing: -.01em;
     }
     .project-link {
       font-family: 'DM Mono', monospace;
-      font-size: .67rem;
-      letter-spacing: .06em;
+      font-size: .65rem;
+      letter-spacing: .05em;
       color: var(--accent);
       text-decoration: none;
       white-space: nowrap;
@@ -239,20 +247,21 @@
       display: flex;
       flex-wrap: wrap;
       gap: .28rem;
-      margin-bottom: .45rem;
+      margin-bottom: .5rem;
     }
     .stack-chip {
       font-family: 'DM Mono', monospace;
-      font-size: .63rem;
-      letter-spacing: .04em;
-      padding: .18rem .5rem;
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      color: var(--muted);
+      font-size: .62rem;
+      letter-spacing: .03em;
+      padding: .17rem .48rem;
+      background: var(--accent-light);
+      border: 1px solid #c7d2fe;
+      border-radius: 4px;
+      color: var(--accent);
     }
     .project-desc {
-      font-size: .87rem;
-      color: #4a4744;
+      font-size: .86rem;
+      color: #374151;
       line-height: 1.8;
     }
 
@@ -265,13 +274,13 @@
     /* ── FOOTER ── */
     footer {
       text-align: center;
-      margin-top: 3rem;
+      margin-top: 3.5rem;
       padding-top: 1.4rem;
       border-top: 1px solid var(--line);
     }
     .footer-note {
       font-family: 'DM Mono', monospace;
-      font-size: .67rem;
+      font-size: .65rem;
       color: var(--muted);
       letter-spacing: .08em;
     }
@@ -293,21 +302,18 @@
   <header class="cv-header">
     <div class="cv-header-top">
       <div>
-        <h1 class="cv-name">홍길동<span>.</span></h1>
-        <p class="cv-title">Backend Engineer &amp; Cloud Infrastructure</p>
+        <h1 class="cv-name">Kim Seyeong<span>.</span></h1>
+        <p class="cv-title">AI Researcher</p>
       </div>
       <address class="cv-contacts">
         <a class="cv-contact-item" href="mailto:hello@example.com">
-          <span class="label">Email</span>hello@example.com
+          <span class="label">Email</span>people7261@konkuk.ac.kr
         </a>
         <a class="cv-contact-item" href="https://github.com/yourusername" target="_blank">
-          <span class="label">GitHub</span>github.com/yourusername
-        </a>
-        <a class="cv-contact-item" href="https://linkedin.com/in/yourusername" target="_blank">
-          <span class="label">LinkedIn</span>linkedin.com/in/yourusername
+          <span class="label">GitHub</span>github.com/ksyku
         </a>
         <span class="cv-contact-item">
-          <span class="label">Location</span>서울, 대한민국
+          <span class="label">Location</span>Seoul, Republic of Korea
         </span>
       </address>
     </div>
@@ -326,54 +332,9 @@
           <p class="skill-group-name">Languages</p>
           <div class="skill-list">
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">C++</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">C</span>
           </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-group-name">Backend</p>
-          <div class="skill-list">
-            <span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">REST API</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-group-name">Database</p>
-          <div class="skill-list">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">MongoDB</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-group-name">DevOps / Cloud</p>
-          <div class="skill-list">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">GitHub Actions</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Activities -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">Activities</h2>
-        <div class="sidebar-item">
-          <p class="sidebar-item-title">오픈소스 기여</p>
-          <p class="sidebar-item-sub">2024 — 현재</p>
-        </div>
-        <div class="sidebar-item">
-          <p class="sidebar-item-title">기술 블로그 운영</p>
-          <p class="sidebar-item-sub">2023 — 현재</p>
-        </div>
-        <div class="sidebar-item">
-          <p class="sidebar-item-title">교내 개발 동아리 활동</p>
-          <p class="sidebar-item-sub">2022 — 2024</p>
         </div>
       </section>
 
@@ -381,12 +342,12 @@
       <section class="cv-section">
         <h2 class="cv-section-title">Languages</h2>
         <div class="sidebar-item">
-          <p class="sidebar-item-title">한국어</p>
+          <p class="sidebar-item-title">Korean</p>
           <p class="sidebar-item-sub">Native</p>
         </div>
         <div class="sidebar-item">
-          <p class="sidebar-item-title">영어</p>
-          <p class="sidebar-item-sub">업무 가능 수준</p>
+          <p class="sidebar-item-title">English</p>
+          <p class="sidebar-item-sub">TOEIC - 760</p>
         </div>
       </section>
 
@@ -412,44 +373,43 @@
 
         <div class="entry">
           <div class="entry-header">
-            <span class="entry-title">건국대학교</span>
-            <span class="entry-period">2021. 03 — 2026. 02 (예정)</span>
+            <span class="entry-title">Konkuk University</span>
+            <span class="entry-period">2021. 03 — Present</span>
           </div>
-          <p class="entry-subtitle">컴퓨터공학과 · 학사</p>
+          <p class="entry-subtitle">B.S in Computer Science</p>
           <ul class="entry-bullets">
-            <li>전공 평균 학점 4.0 / 4.5</li>
+            <li>Major GPA 4.0 / 4.5</li>
           </ul>
         </div>
 
       </section>
 
-      <!-- Experience -->
+      <!-- Research -->
       <section class="cv-section">
-        <h2 class="cv-section-title">Experience</h2>
+        <h2 class="cv-section-title">Research</h2>
 
         <div class="entry">
           <div class="entry-header">
-            <span class="entry-title">스타트업 A</span>
-            <span class="entry-period">2024. 07 — 2024. 12</span>
+            <span class="entry-title">GLI (Graph &amp; Language Intelligence) Lab</span>
+            <span class="entry-period">2025. 07 — Present</span>
           </div>
-          <p class="entry-subtitle">Backend Engineer Intern</p>
+          <p class="entry-subtitle">Konkuk University · Undergraduate Researcher</p>
           <ul class="entry-bullets">
-            <li>Spring Boot 기반 REST API 설계 및 개발, 기존 레거시 대비 응답 속도 30% 개선</li>
-            <li>AWS EC2·RDS 환경 구성 및 GitHub Actions CI/CD 파이프라인 구축</li>
-            <li>PostgreSQL 쿼리 최적화 및 인덱스 튜닝으로 조회 성능 2배 향상</li>
+            <li>Contributed to experimental design and validation for a WWW submission on differentiable graph retrieval</li>
+            <li>Designed and trained anomaly detection models; performed comparative experiments and literature reviews to evaluate model performance</li>
           </ul>
         </div>
 
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">교내 연구실 (시스템 소프트웨어 Lab)</span>
-            <span class="entry-period">2023. 03 — 2024. 02</span>
-          </div>
-          <p class="entry-subtitle">학부 연구생</p>
-          <ul class="entry-bullets">
-            <li>컨테이너 오케스트레이션 환경에서의 네트워크 지연 분석 연구 참여</li>
-            <li>논문 실험 환경 구성 및 데이터 수집 자동화 스크립트 작성 (Python)</li>
-          </ul>
+        <div class="cv-section-title" style="font-size:.62rem; margin-top:1.4rem; margin-bottom:.8rem; border-bottom:none; padding-bottom:0; letter-spacing:.16em;">Publications</div>
+
+        <div class="entry" style="margin-bottom:1rem;">
+          <p class="entry-desc">Dongcheon Lee, Ji-Yeon Park, Hye-Yoon Baek, Jimyeung Seo, <strong>Seyeong Kim</strong>, and Byungkook Oh, "Diversifying Differentiable Graph Retrieval with Topic-Adaptive Multi-Intent Learning." <em>In WWW (The Web Conference)</em></p>
+          <p class="entry-subtitle" style="margin-top:.25rem; margin-bottom:0;">Submitted Oct. 2025 · Accepted</p>
+        </div>
+
+        <div class="entry" style="margin-bottom:0;">
+          <p class="entry-desc"><strong>Seyeong Kim</strong>, Dongcheon Lee, Jengwon Hwang, Sengho Kang, Byungkook Oh, "Proposal of PCB component-level anomaly detection pipeline via object detection." <em>In KCC 2026</em></p>
+          <p class="entry-subtitle" style="margin-top:.25rem; margin-bottom:0;">Submitted Apr. 2026</p>
         </div>
 
       </section>
@@ -498,6 +458,45 @@
             <span class="stack-chip">Vercel</span>
           </div>
           <p class="project-desc">개발자를 위한 마크다운 기반 기술 블로그 플랫폼. SSG 방식으로 구현하여 빠른 로딩 속도와 SEO 최적화 실현.</p>
+        </div>
+
+      </section>
+
+      <!-- Awards & Competitions -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Awards &amp; Competitions</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">RISE AI-LivingLab Challenge</span>
+            <span class="entry-period">2025</span>
+          </div>
+          <p class="entry-subtitle">Grand Prize · KU President's Award</p>
+          <ul class="entry-bullets">
+            <li>Applied a CNN-based waste disposal system to address environmental issues in Gwangjin-gu</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Konkuk University Academic Contest</span>
+            <span class="entry-period">2025</span>
+          </div>
+          <p class="entry-subtitle">Grand Prize · Best Project Award</p>
+          <ul class="entry-bullets">
+            <li>Proposed a large-scale waste disposal system utilizing Convolutional Neural Networks (CNN)</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">University/Graduate Student Quantum Cryptography Communication Idea Contest</span>
+            <span class="entry-period">2021</span>
+          </div>
+          <p class="entry-subtitle">Third Place</p>
+          <ul class="entry-bullets">
+            <li>Presented an idea on the necessity of quantum cryptography for national defense applications</li>
+          </ul>
         </div>
 
       </section>
